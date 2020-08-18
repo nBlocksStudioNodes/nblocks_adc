@@ -6,8 +6,8 @@
 
 class nBlock_ADC: public nBlockSimpleNode<1> {
 public:
-    nBlock_ADC(PinName pinAdc);
-    void triggerInput(uint32_t inputNumber, uint32_t value);
+    nBlock_ADC(PinName pinAdc, nBlocks_OutputType data_type = OUTPUT_TYPE_FLOAT);
+    void triggerInput(nBlocks_Message message);
 private:
     AnalogIn _adc;
 };
